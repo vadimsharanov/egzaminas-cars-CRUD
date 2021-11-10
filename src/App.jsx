@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import axios from "axios";
 import Cars from "./Components/Cars";
 import NewCar from "./Components/NewCar";
@@ -9,7 +10,7 @@ function App() {
   const [carsCount, setCarsCount] = useState(0);
   const [carsTotalWeight, setCarsTotalWeight] = useState(0);
   const [postuKeitimoLaikas, setPostuKeitimoLaikas] = useState(Date.now());
-  console.log(postuKeitimoLaikas);
+
   useEffect(() => {
     axios
       .get("http://localhost:3002/cars")
@@ -22,7 +23,7 @@ function App() {
         // handle error
         console.log(error);
       });
-  }, []);
+  }, [postuKeitimoLaikas]);
 
   const addCar = (data) => {
     console.log(data);
@@ -91,7 +92,7 @@ function App() {
   useEffect(() => {
     getCount();
     getCarsTotalWeight();
-  }, []);
+  }, [postuKeitimoLaikas]);
 
   // const crud = {
   //   add:addCow,
