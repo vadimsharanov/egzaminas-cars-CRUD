@@ -1,0 +1,173 @@
+@import "./Components/layout.scss";
+
+body {
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // overflow: hidden;
+}
+body * {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-family: "Nunito", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.cars-container {
+  margin: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  .one-car-container {
+    border: 3px solid violet;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    font-size: 20px;
+    max-width: 400px;
+
+    input {
+      min-width: 30%;
+    }
+    .one-car-id {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      padding: 14px;
+      border-radius: 50%;
+      background-color: rgb(36, 212, 204);
+    }
+    .one-car-name {
+      padding: 10px;
+    }
+    .one-car-weight {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+    }
+    .one-car-passengers {
+      display: flex;
+      padding: 10px;
+    }
+    .one-car-priority {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-size: 23px;
+      .checkbox {
+        height: 26px;
+        width: 26px;
+      }
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .trinimo-mygtukas {
+      width: 80px;
+      background-color: antiquewhite;
+      padding: 5px 10px 5px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .redagavimo-mygtukas {
+      width: 120px;
+      background-color: antiquewhite;
+      padding: 5px 10px 5px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.new-car {
+  display: flex;
+  background-color: bisque;
+  border: 2px solid rosybrown;
+  justify-items: center;
+  align-items: center;
+  padding: 30px;
+  .new-plate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .new-weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .new-passengers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .priority {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: self-start;
+  }
+  .new-priority {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 29px;
+
+    .checkbox {
+      transform: scale(3);
+    }
+  }
+
+  .new-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  input {
+    margin-left: 10px;
+    padding: 15px 10px 10px 5px;
+    font-size: 18px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  button {
+    padding: 10px 40px 10px 40px;
+    font-size: 20px;
+    background-color: chartreuse;
+  }
+}
+
+.statistika {
+  .button-weight {
+    padding: 10px 5px 10px 5px;
+    background-color: skyblue;
+  }
+  .button-passengers {
+    padding: 10px 5px 10px 5px;
+    background-color: salmon;
+  }
+}
